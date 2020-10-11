@@ -1,0 +1,81 @@
+
+#page {
+        display:grid;
+        box-sizing: border-box;
+        width: 100%;
+        height:1000px;
+        grid-template-areas: "head head"
+                             "nav main"
+                             "nav footer";
+        grid-template-rows:1fr 5fr 1fr;
+        grid-template-columns: 1fr 5fr;
+}
+
+header {
+    grid-area: head;
+    background-image:url(Img/Header.jpg);
+    background-color:transparent;
+    background-size: 50%;
+    text-align: center;
+    
+}
+nav{
+    grid-area: nav;
+    background-image:url(Img/Nav.png);
+    background-color:transparent;
+    background-size: 150%;
+   
+}
+.logo {
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+
+main{
+    grid-area: main;
+    background-image:url(Img/Main.png);
+    background-color:transparent;
+    background-size: 100%;
+}
+
+img {
+    max-width: 400px;
+}
+
+footer{
+    grid-area: footer;
+    background-image:url(Img/Footer.png);
+    background-color:transparent;
+    background-size: 100%;
+
+}
+.lista1 {
+    display:inline-block;   
+  
+}
+
+@media (max-width:1000px) {
+    #page {
+        display:grid;
+        box-sizing: border-box;
+        width: 100%;
+        height:1000px;
+        grid-template-areas: "head"
+                             "nav"
+                             "main"
+                             "footer";
+        grid-template-rows:1fr 1fr 3fr 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+ul{
+    list-style-type:none;
+}
+
